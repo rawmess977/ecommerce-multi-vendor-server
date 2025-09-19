@@ -6,7 +6,6 @@ import { createToken } from "../utils/createToken.js";
 class AuthController {
   admin_login = async (req, res) => {
     const { email, password } = req.body;
-    bcrypt.hash("yourpassword", 10).then(console.log);
     try {
       const admin = await adminModel
         .findOne({
